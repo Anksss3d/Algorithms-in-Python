@@ -1,23 +1,5 @@
 import math
 
-def fun(X, k):
-    pivot = SELECT(X)
-    print("Selected Pivot is: "+pivot.__str__())
-    X1 = []
-    X2 = []
-    for i in range(0, len(X)):
-        if X[i] < pivot:
-            X1.append(X[i])
-        elif X[i] > pivot:
-            X2.append(X[i])
-
-    if len(X1) == (k-1):
-        return pivot
-    elif len(X1) > (k-1):
-        return fun(X1, k)
-    else:
-        return fun(X2, k-len(X1)-1)
-
 
 def fun2(X, W, w1, w2):
     print("in function now w1="+str(w1)+", w2="+str(w2))
